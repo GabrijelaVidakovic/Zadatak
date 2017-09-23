@@ -1,5 +1,9 @@
+
+@import 'colors';
+
 // bower:scss
 // endbower
+
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -12,20 +16,93 @@ body {
   background: #fafafa;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
+  box-sizing: border-box;
+  margin: 0;
+  max-width: 1600px;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+.Header {
+  background-color: $bg-grey;
+
+  .Header-inner {
+    padding: 25px 100px;
+
+    .Header-logo {
+      float: left;
+    }
+
+    .Nav-section {
+      float: right;
+
+      .Nav-list {
+        margin: 0;
+
+        .Nav-search {
+           width:45px;
+        }
+
+        .Nav-listItem {
+          display: inline-block;
+          padding: 0 25px;
+          list-style: none;
+
+          .Nav-link {
+            font-family: OpenSans;
+            font-size: 11px;
+            letter-spacing: 3.4px;
+            line-height: 19px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $header-text;
+
+            &:hover {
+              color: #3498DB;
+            }
+          }
+        }
+      }
+    }
+
+    .Header-search {
+      display: inline-block;
+    }
+
+    .Header-main {
+      margin: 270px auto 50px auto;
+      text-align: center;
+      color: $header-text;
+      width: 50%;
+
+      .Header-intro {
+        font-family: 'Raleway', sans-serif;
+        font-size: 11px;
+        letter-spacing: 3.4px;
+        line-height: 24px;
+        text-transform: uppercase;
+      }
+      .Header-title {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        font-size: 40px;
+        letter-spacing: 0;
+        line-height: 58px;
+      }
+      .Header-text {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+      }
+      &:after {
+        content: '';
+        display: block;
+        background: url(../images/arrow-down.png) no-repeat;
+        width: 31px;
+        height: 31px;
+        margin: 200px auto 0 auto;
+      }
+    }
   }
 }
+
+
