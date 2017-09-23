@@ -21,7 +21,7 @@ body {
 }
 
 .Header {
-  background-color: $bg-grey;
+  background-color: $bg-darkGrey;
 
   .Header-inner {
     padding: 25px 100px;
@@ -105,11 +105,14 @@ body {
 }
 
 .Section-one {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
   text-align: center;
   margin: 73px auto 94px auto;
   width: 56%;
+}
+
+.Section {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 
   .Section-title {
     font-size: 32px;
@@ -121,6 +124,25 @@ body {
     font-size: 15px;
     color: $section-text;
     line-height: 30px;
+  }
+}
+
+.Section-two {
+  width: 100%;
+  background-color: $bg-darkGrey;
+  box-sizing: border-box;
+  display: flex;
+
+  .Section-blockLeft {
+    width: 50%;
+    float: left;
+  }
+
+  .Section-blockRight {
+    background: $bg-lightGrey;
+    width: 50%;
+    float: right;
+    padding: 140px 22px 140px 78px;
   }
 }
 
