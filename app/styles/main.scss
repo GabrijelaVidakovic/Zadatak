@@ -1,21 +1,14 @@
 @import 'colors';
+@import 'fonts';
 
 // bower:scss
 // endbower
 
-
-// .browserupgrade {
-//   margin: 0.2em 0;
-//   background: #ccc;
-//   color: #000;
-//   padding: 0.2em 0;
-// }
-
 body {
-  background: #fafafa;
   box-sizing: border-box;
   margin: 0;
   max-width: 1600px;
+  font-family: $open-sans;
 }
 
 .Header {
@@ -40,11 +33,12 @@ body {
 
         .Nav-listItem {
           display: inline-block;
-          padding: 0 25px;
+          padding-right: 25px;
           list-style: none;
 
           &:last-child {
              vertical-align: bottom;
+             padding: 0 0 0 40px;
           }
 
           .Nav-link {
@@ -60,22 +54,41 @@ body {
             }
           }
 
-          .Search-icon {
-            content: '';
-            display: block;
-            background: url(../images/search.svg) no-repeat;
-            width: 23px;
-            height: 23px;
-            cursor: pointer;
+          .Search-form {
+            height: 22px;
 
+            .Search-icon {
+              content: '';
+              display: block;
+              background: url(../images/search.svg) no-repeat;
+              width: 23px;
+              height: 23px;
+              cursor: pointer;
+            }
+
+             .Search-input {
+              transition: all 0.2s ease-out;
+              width: 1px;
+              border-radius: 0;
+              box-shadow: none;
+              outline: none;
+              padding: 0;
+              margin: 0;
+              border: 0;
+              background-color: transparent;
+              opacity: 0;
+
+              &:focus {
+                width: 80px;
+                opacity: 1;
+              }
+            }
           }
         }
       }
     }
 
-    .Header-search {
-      display: inline-block;
-    }
+
 
     .Header-main {
       margin: 270px auto 50px auto;
@@ -84,21 +97,20 @@ body {
       width: 50%;
 
       .Header-intro {
-        font-family: 'Raleway', sans-serif;
+        font-family: $raleway;
         font-size: 11px;
         letter-spacing: 3.4px;
         line-height: 24px;
         text-transform: uppercase;
       }
+
       .Header-title {
-        font-family: 'Open Sans', sans-serif;
         font-weight: 300;
         font-size: 40px;
         letter-spacing: 0;
         line-height: 58px;
       }
       .Header-text {
-        font-family: 'Open Sans', sans-serif;
         font-weight: 300;
         font-size: 16px;
         line-height: 20px;
@@ -115,14 +127,8 @@ body {
   }
 }
 
-.Section-one {
-  text-align: center;
-  margin: 73px auto 94px auto;
-  width: 56%;
-}
-
 .Section {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $open-sans;
   font-weight: 300;
 
   .Section-title {
@@ -136,6 +142,12 @@ body {
     color: $section-text;
     line-height: 30px;
   }
+}
+
+.Section-one {
+  text-align: center;
+  margin: 73px auto 94px auto;
+  width: 56%;
 }
 
 .Section-two {
@@ -160,43 +172,52 @@ body {
 .Section-three {
   text-align: center;
   margin: 87px auto 70px auto;
-  width: 56%;
-}
+  width: 100%;
 
-.Section-tab {
-  display: block;
-  margin: 0;
-  padding: 0;;
-  list-style: none;
+  img {
 
-  .Section-tabItem {
-    display: inline-block;
-    font-family: 'Raleway', sans-serif;
-    font-size: 11px;
-    letter-spacing: 3.4px;
-    line-height: 11px;
-    text-transform: uppercase;
-    padding-right: 50px;
-    margin: 55px 0;
-
-    &:last-child {
-      padding-right: 0
-    }
-
-    .Tab-link {
-      color: $blue-text;
-      text-decoration: none;
-
-      &:active, &:hover, &:visited, &:focus {
-        color: #3498db;
-        border-bottom: 3px solid $blue-text;
-        padding-bottom: 8px;
-      }
+    &.mix {
+      display:none;
     }
   }
 }
 
-/* ---- masonry ---- */
+.Section-tab {
+  display: block;
+  padding: 0;;
+  list-style: none;
+  margin: 55px 0;
+
+  button  {
+    display: inline-block;
+    font-family: $raleway;
+    font-size: 11px;
+    letter-spacing: 3.4px;
+    line-height: 11px;
+    text-transform: uppercase;
+    margin-right: 50px;
+    border: 3px solid transparent;
+    padding-bottom: 8px;
+    color: $blue-text;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    background-color: #fff;
+
+    &:last-child {
+      margin-right: 0
+    }
+
+    &:active, &:hover, &:visited, &:focus {
+      color: #3498db;
+      border-bottom: 3px solid $blue-text;
+      padding-bottom: 8px;
+      outline: none;
+    }
+  }
+}
+
+/* ---- Masonry ---- */
 
 .grid-sizer,
 .grid-item {
@@ -212,11 +233,9 @@ body {
   max-width: 100%;
 }
 
-.hidden {
-      display: none;
-      opacity: 0;
-    }
 
-.form {
-  display: none;
-}
+
+
+
+
+

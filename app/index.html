@@ -16,8 +16,6 @@
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
     <!-- endbuild -->
 
 
@@ -26,6 +24,7 @@
     <!-- endbuild -->
 
   </head>
+
   <body>
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -60,11 +59,12 @@
                   <a href="#contact-us" class="Nav-link">Contact Us</a>
                 </li>
                 <li class="Nav-listItem">
-                  <div class="Search-icon"></div>
-                  <form class="form active">
-        <span class="close">close</span>
-        <input type="text" name="seach" />
-      </form>
+                  <form role="search" method="get" class="Search-form" action="">
+                    <label for="search">
+                    <div class="Search-icon"></div>
+                    </label>
+                    <input type="text" value="" placeholder="search" class="Search-input" id="search" />
+                  </form>
                 </li>
             </ul>
         </nav>
@@ -84,7 +84,6 @@
 
     <section class="Section Section-two">
       <div class="Section-blockLeft">
-      <p></p>
       </div>
       <div class="Section-block Section-blockRight">
         <h3 class="Section-title">Why to choose Feeder</h3>
@@ -100,40 +99,32 @@
       </div>
     </section>
 
-    <section id="portfolio" class="Section Section-three">
+
+    <section id="portfolio" class="Section Section-three gallery">
       <h3 class="Section-title">Portfolio</h3>
       <p class="Section-text">Mauris lacinia porta faucibus. Fusce eu est ac eros vulputate mollis in ac.</p>
-        <ul class="Section-tab">
-            <li class="Section-tabItem active"><a href="#all" class="Tab-link" id="showAll"> All</a></li>
-            <li class="Section-tabItem noActive"><a href="#design" class="Tab-link" id="design"> Design</a></li>
-            <li class="Section-tabItem noActive"><a href="#identity" class="Tab-link" id="identity"> Identity</a></li>
-            <li class="Section-tabItem noActive"><a href="#photography" class="Tab-link" id="photography"> Photography</a></li>
-            <li class="Section-tabItem noActive"><a href="#web-design" class="Tab-link" id="web-design"> Web design</a></li>
-        </ul>
-    </section>
+
+      <div class="Section-tab">
+          <button class="btn btn-default filter" data-filter="all"> All</button>
+          <button class="btn btn-default filter" data-filter=".design"> Design</button>
+          <button class="btn btn-default filter" data-filter=".identity"> Identity</button>
+          <button class="btn btn-default filter" data-filter=".photography"> Photography</button>
+          <button class="btn btn-default filter" data-filter=".web-design"> Web design</button>
+      </div>
 
     <div class="grid">
       <div class="grid-sizer"></div>
-        <div id="design-content">
-          <div class="grid-item"><img src="http://lorempixel.com/400/400/" alt=""></div>
-        </div>
-
-        <div id="identity-content">
-          <div class="grid-item"><img src="http://lorempixel.com/400/500/sports/" alt=""></div>
-          <div class="grid-item"><img src="http://lorempixel.com/400/300/sports/" alt=""></div>
-        </div>
-
-        <div id="photography-content">
-          <div class="grid-item"><img src="http://lorempixel.com/400/400/sports/" alt=""></div>
-        </div>
-
-        <div id="web-design-content">
-          <div class="grid-item"><img src="http://lorempixel.com/400/500/sports/" alt=""></div>
-          <div class="grid-item"><img src="http://lorempixel.com/400/400/sports/" alt=""></div>
-          <div class="grid-item"><img src="http://lorempixel.com/400/400/sports/" alt=""></div>
-          <div class="grid-item"><img src="http://lorempixel.com/400/300/sports/" alt=""></div>
-        </div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/400/" alt="" class="mix "></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/500/sports/" alt="" class="mix design"></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/300/sports/" alt="" class="mix web-design"></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/400/sports/" alt="" class="mix identity"></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/500/sports/" alt="" class="mix photography"></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/400/sports/" alt="" class="mix design"></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/400/sports/" alt="" class="mix identity"></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/300/sports/" alt="" class="mix design"></div>
     </div>
+  </section>
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -154,9 +145,10 @@
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
 
-
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+    <script src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+
   </body>
 </html>
