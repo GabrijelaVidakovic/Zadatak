@@ -1,10 +1,10 @@
 
 $(document).ready(function() {
 
-  jQuery('.gallery').mixItUp({
+  jQuery('.js-gallery').mixItUp({
 
     load: {
-      sort: 'all'
+      sort: '.mix'
     },
 
   });
