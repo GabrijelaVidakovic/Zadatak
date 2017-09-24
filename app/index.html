@@ -16,14 +16,15 @@
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
     <!-- endbuild -->
+
 
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+
   </head>
+
   <body>
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -58,8 +59,12 @@
                   <a href="#contact-us" class="Nav-link">Contact Us</a>
                 </li>
                 <li class="Nav-listItem">
-
-                  <i class="fa fa-search"></i>
+                  <form role="search" method="get" class="Search-form" action="">
+                    <label for="search">
+                    <div class="Search-icon"></div>
+                    </label>
+                    <input type="text" value="" placeholder="search" class="Search-input" id="search" />
+                  </form>
                 </li>
             </ul>
         </nav>
@@ -72,14 +77,13 @@
       </div>
     </header>
 
-    <section class="Section Section-one">
+    <section id="about-us" class="Section Section-one">
       <h3 class="Section-title">About Feeder</h3>
       <p class="Section-text">Mauris lacinia porta faucibus. Fusce eu est ac eros vulputate mollis in ac felis. Aenean commodo scelerisque mi sed imperdiet. Donec at hendrerit nisi, eget vestibulum nisi. Sed sit amet magna luctus, facilisis erat quis, sagittis ligula. Aenean dignissim velit quis leo consequat ultricies. Proin quis pretium justo. Vestibulum at eros nisl. Fusce lobortis erat ante, eu cursus sapien molestie at. Pellentesque placerat ante diam, et euismod lacus dictum vel. Phasellus vitae sollicitudin mi.</p>
     </section>
 
     <section class="Section Section-two">
       <div class="Section-blockLeft">
-      <p></p>
       </div>
       <div class="Section-block Section-blockRight">
         <h3 class="Section-title">Why to choose Feeder</h3>
@@ -94,6 +98,33 @@
          </p>
       </div>
     </section>
+
+
+    <section id="portfolio" class="Section Section-three gallery">
+      <h3 class="Section-title">Portfolio</h3>
+      <p class="Section-text">Mauris lacinia porta faucibus. Fusce eu est ac eros vulputate mollis in ac.</p>
+
+      <div class="Section-tab">
+          <button class="btn btn-default filter" data-filter="all"> All</button>
+          <button class="btn btn-default filter" data-filter=".design"> Design</button>
+          <button class="btn btn-default filter" data-filter=".identity"> Identity</button>
+          <button class="btn btn-default filter" data-filter=".photography"> Photography</button>
+          <button class="btn btn-default filter" data-filter=".web-design"> Web design</button>
+      </div>
+
+    <div class="grid">
+      <div class="grid-sizer"></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/400/" alt="" class="mix "></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/500/sports/" alt="" class="mix design"></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/300/sports/" alt="" class="mix web-design"></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/400/sports/" alt="" class="mix identity"></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/500/sports/" alt="" class="mix photography"></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/400/sports/" alt="" class="mix design"></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/400/sports/" alt="" class="mix identity"></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/300/sports/" alt="" class="mix design"></div>
+    </div>
+  </section>
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -111,9 +142,13 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+    <script src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+
   </body>
 </html>
