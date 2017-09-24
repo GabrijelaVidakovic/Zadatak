@@ -178,7 +178,7 @@ body {
 
     &.mix {
       display:none;
-    }
+transition: width 0.2s, height 0.04s;    }
   }
 }
 
@@ -217,22 +217,23 @@ body {
   }
 }
 
-/* ---- Masonry ---- */
 
-.grid-sizer,
-.grid-item {
-  width: 25%;
-}
-
-.grid-item {
-  float: left;
-}
 
 .grid-item img {
-  display: block;
-  max-width: 100%;
+    height: auto;
+    display: block;
+    transition: a
 }
 
+.grid {
+  margin: 1rem 0;
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+    -webkit-column-width: 25%;
+    -moz-column-width: 25%;
+    column-width: 25%;
+}
 
 
 
