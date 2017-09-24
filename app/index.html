@@ -20,9 +20,11 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
     <!-- endbuild -->
 
+
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+
   </head>
   <body>
     <!--[if IE]>
@@ -58,8 +60,11 @@
                   <a href="#contact-us" class="Nav-link">Contact Us</a>
                 </li>
                 <li class="Nav-listItem">
-
-                  <i class="fa fa-search"></i>
+                  <div class="Search-icon"></div>
+                  <form class="form active">
+        <span class="close">close</span>
+        <input type="text" name="seach" />
+      </form>
                 </li>
             </ul>
         </nav>
@@ -95,17 +100,40 @@
       </div>
     </section>
 
-    <section class="Section Section-three">
+    <section id="portfolio" class="Section Section-three">
       <h3 class="Section-title">Portfolio</h3>
       <p class="Section-text">Mauris lacinia porta faucibus. Fusce eu est ac eros vulputate mollis in ac.</p>
         <ul class="Section-tab">
-            <li class="Section-tabItem"><a href="#all" class="Tab-link"> All</a></li>
-            <li class="Section-tabItem"><a href="#design" class="Tab-link"> Design</a></li>
-            <li class="Section-tabItem"><a href="#identity" class="Tab-link"> Identity</a></li>
-            <li class="Section-tabItem"><a href="#photography" class="Tab-link"> Photography</a></li>
-            <li class="Section-tabItem"><a href="#web-design" class="Tab-link"> Web design</a></li>
+            <li class="Section-tabItem active"><a href="#all" class="Tab-link" id="showAll"> All</a></li>
+            <li class="Section-tabItem noActive"><a href="#design" class="Tab-link" id="design"> Design</a></li>
+            <li class="Section-tabItem noActive"><a href="#identity" class="Tab-link" id="identity"> Identity</a></li>
+            <li class="Section-tabItem noActive"><a href="#photography" class="Tab-link" id="photography"> Photography</a></li>
+            <li class="Section-tabItem noActive"><a href="#web-design" class="Tab-link" id="web-design"> Web design</a></li>
         </ul>
     </section>
+
+    <div class="grid">
+      <div class="grid-sizer"></div>
+        <div id="design-content">
+          <div class="grid-item"><img src="http://lorempixel.com/400/400/" alt=""></div>
+        </div>
+
+        <div id="identity-content">
+          <div class="grid-item"><img src="http://lorempixel.com/400/500/sports/" alt=""></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/300/sports/" alt=""></div>
+        </div>
+
+        <div id="photography-content">
+          <div class="grid-item"><img src="http://lorempixel.com/400/400/sports/" alt=""></div>
+        </div>
+
+        <div id="web-design-content">
+          <div class="grid-item"><img src="http://lorempixel.com/400/500/sports/" alt=""></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/400/sports/" alt=""></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/400/sports/" alt=""></div>
+          <div class="grid-item"><img src="http://lorempixel.com/400/300/sports/" alt=""></div>
+        </div>
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -123,6 +151,9 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
