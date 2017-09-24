@@ -124,8 +124,14 @@ body {
     width: 31px;
     height: 31px;
     margin: 200px auto 0 auto;
+    cursor: pointer;
+    animation: .7s down  infinite alternate;
+      -webkit-animation: .7s down infinite alternate;
   }
+  @keyframes down { 0%{transform:translateY(0px)} 100%{transform:translateY(20px)} }
+  @-webkit-keyframes down{ 0%{-webkit-transform:translateY(0px)} 100%{-webkit-transform:translateY(20px)} }
 }
+
 
 
 .Section {
