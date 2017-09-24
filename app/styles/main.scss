@@ -21,7 +21,7 @@ body {
       float: left;
     }
 
-    .Nav-section {
+    .Nav {
       float: right;
 
       .Nav-list {
@@ -218,11 +218,9 @@ transition: width 0.2s, height 0.04s;    }
 }
 
 
-
 .grid-item img {
     height: auto;
     display: block;
-    transition: a
 }
 
 .grid {
